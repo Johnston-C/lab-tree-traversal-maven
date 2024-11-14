@@ -14,4 +14,4 @@ Acknowledgements
 *
 *
 
-This code may be found at <URL>. The original code may be found at <https://github.com/Grinnell-CSC207/lab-tree-traversal-maven>.
+This code may be found at <https://github.com/Johnston-C/lab-tree-traversal-maven>. The original code may be found at <https://github.com/Grinnell-CSC207/lab-tree-traversal-maven>.
