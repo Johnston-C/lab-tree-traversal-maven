@@ -112,6 +112,52 @@ public class BinaryTree<T> implements Iterable<T> {
     } // else
   } // dump
 
+  void elements01(PrintWriter pen, BinaryTreeNode<T> node, String indent){
+    if(node == null){
+      pen.print("");
+    } else {
+      pen.print(indent + node.value);
+      if ((node.left != null) || (node.right != null)) {
+        elements01(pen, node.left, " ");
+        elements01(pen, node.right, " ");
+      } // if has children
+    }
+  }
+
+
+
+  public void elements01(PrintWriter pen) {
+    elements01(pen, root, "");
+    pen.println("");
+  } // dump(PrintWriter)
+
+
+  void elements02(PrintWriter pen, BinaryTreeNode<T> node, String indent){
+    if(node == null){
+      pen.print("");
+    } else {
+      
+      if (node.left != null) {
+        elements02(pen, node.left, " ");
+      } 
+      pen.print(indent + node.value);
+      if(node.right != null){
+        elements02(pen, node.right, " ");
+      }
+    }
+  }
+
+  
+  
+
+  public void elements02(PrintWriter pen) {
+    elements02(pen, root, " ");
+    pen.println("");
+  } // dump(PrintWriter)
+
+
+
+
   /**
    * Build a tree from a subarray from lb (inclusive) to ub (exclusive).
    *
@@ -136,5 +182,7 @@ public class BinaryTree<T> implements Iterable<T> {
           makeTree(values, mid + 1, ub));
     } // if/else
   } // makeTree(T[], int, int)
+
+
 
 } // class BinaryTree
